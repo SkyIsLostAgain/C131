@@ -1,4 +1,5 @@
 img = "";
+status = "";
 
 function preload(){
     img = loadImage("dog_cat.jpg");
@@ -24,4 +25,16 @@ function draw(){
     noFill();
     stroke("red");
     rect(300, 90, 270, 320);
+}
+
+function modelLoaded(){
+    console.log("Model Loaded!");
+    status = true;
+    objectDetector.detect(img, gotResult);
+}
+function gotResult(error, results){
+    if(error){
+        console.log(error);
+    }
+    console.log(results);
 }
