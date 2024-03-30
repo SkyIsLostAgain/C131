@@ -20,7 +20,6 @@ function draw(){
     fill("red");
     noFill();
     stroke("red");
-    rect(30, 60, 450, 350);
-    text("Cat", 80, 90);
-    rect(50, 400, 380, 69);
+    text("Cat", 320, 120);
+    rect(300, 90, 270, 320);
 }
