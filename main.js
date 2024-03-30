@@ -17,6 +17,6 @@ function draw(){
     stroke("red");
     rect(30, 60, 450, 350);
 
-    text("Cat", 55, 80);
+    text("Cat", 80, 90);
     rect(50, 40, 250, 300);
 }
