@@ -18,8 +18,8 @@ function draw(){
     rect(30, 60, 450, 350);
 
     fill("red");
+    text("Cat", 320, 120);
     noFill();
     stroke("red");
-    text("Cat", 320, 120);
     rect(300, 90, 270, 320);
 }
