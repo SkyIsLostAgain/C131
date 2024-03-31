@@ -15,21 +15,17 @@ function setup(){
 
 function draw(){
     image(img, 0, 0, 640, 420);
-    fill("red");
-    text("Dog", 45, 74);
-    noFill();
-    stroke("red");
-    rect(30, 60, 450, 350);
-
-    fill("red");
-    text("Cat", 320, 120);
-    noFill();
-    stroke("red");
-    rect(300, 90, 270, 320);
-
+   
     if(status != ""){
         for (i = 0; i < objects.length; i++){
             document.getElementById("status").innerHTML = "Status : Objects detected";
+
+            fill("red");
+            percent = floor(objects[i].confidence * 100);
+            text (objects[i].label + " " + percent + "%", objects[i].x, objects[i].y);
+            noFill();
+            stroke("red");
+            rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
         }
     }
 }
