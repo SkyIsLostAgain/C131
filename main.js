@@ -1,5 +1,6 @@
 img = "";
 status = "";
+objects = [];
 
 function preload(){
     img = loadImage("dog_cat.jpg");
@@ -25,6 +26,12 @@ function draw(){
     noFill();
     stroke("red");
     rect(300, 90, 270, 320);
+
+    if(status != ""){
+        for (i = 0; i < objects.length; i++){
+            document.getElementById("status").innerHTML = "Status : Objects detected";
+        }
+    }
 }
 
 function modelLoaded(){
@@ -37,4 +44,5 @@ function gotResult(error, results){
         console.log(error);
     }
     console.log(results);
+    objects = results;
 }
